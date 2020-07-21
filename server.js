@@ -92,7 +92,7 @@ io.on("connection", function(socket) {
   socket.emit("message", {
     text: "Welcome to Gossip-Dot-Com !",
     timestamp: moment().valueOf(),
-    name: "System"
+    name: "Natasha"
   });
 
   
