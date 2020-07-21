@@ -1,4 +1,3 @@
-
 .vertical-center {
   min-height: 100vh;
   margin: 0;
@@ -16,7 +15,7 @@ h1 {
 }
 .mymessages {
   text-align: right;
-  color: #2E6D88;
+  color: #106f97;
   font-style: italic;
 }
 ul.messages.list-group {
