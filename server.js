@@ -83,7 +83,7 @@ io.on("connection", function(socket) {
   });
   // to show drawing to all clients
   socket.on('mouse', function(data) { 
-    console.log(data);
+    //console.log(data);
     socket.broadcast.to(clientInfo[socket.id].room).emit('mouse', data);
   });
   // to check if user seen Message
