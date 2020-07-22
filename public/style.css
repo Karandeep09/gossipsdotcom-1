@@ -8,18 +8,19 @@
   flex-grow:1
 }
 h1 {
-  margin: 24px 0;
+  margin: 10px 0;
 }
 .messages p {
   margin: 6px 0;
 }
 .mymessages {
   text-align: right;
-  color: #106f97;
-  font-style: italic;
+  color: #226fb8;
+  font-family: cursive;
+  font-size: 2.4vh;
 }
 ul.messages.list-group {
-  max-height: 50vh;
+  max-height: 45vh;
   overflow-y: scroll;
 }
 .typing {
@@ -28,10 +29,10 @@ ul.messages.list-group {
 .msg-delieverd {
   text-shadow: 1px 1px 1px #ccc;
   font-size: 1.5em;
-  color: #2F99F5;
+  color: #010a11;
 }
 .msg-read {
   text-shadow: 1px 1px 1px #ccc;
   font-size: 1.5em;
-  color: #2AC151;
+  color: #1c3ae6;
 }
