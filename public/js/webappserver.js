@@ -5,7 +5,7 @@
  var room = getQueryVariable("room") || 'No Room Selected';
 
  function setup() {
-  createCanvas(400, 400); 
+  createCanvas(690, 400); 
   background(220,220,220); 
   socket.on('mouse',data=>{
       console.log("Got data "+data.x+" "+data.y+" "+data.name);
