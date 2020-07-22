@@ -81,7 +81,11 @@ io.on("connection", function(socket) {
   socket.on('typing', function(message) { 
     socket.broadcast.to(clientInfo[socket.id].room).emit("typing", message);
   });
-
+  // to show drawing to all clients
+  socket.on('mouse', function(data) { 
+    //console.log(data);
+    socket.broadcast.to(clientInfo[socket.id].room).emit('mouse', data);
+  });
   // to check if user seen Message
   socket.on("userSeen", function(msg) {
     socket.broadcast.to(clientInfo[socket.id].room).emit("userSeen", msg);
