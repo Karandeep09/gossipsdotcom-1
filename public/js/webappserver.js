@@ -4,36 +4,6 @@
  var name = getQueryVariable("name") || 'Anonymous';
  var room = getQueryVariable("room") || 'No Room Selected';
 
- function setup() {
-  createCanvas(690, 400); 
-  background(220,220,220); 
-  socket.on('mouse',data=>{
-      console.log("Got data "+data.x+" "+data.y+" "+data.name);
-      fill(0,0,255);
-      noStroke();
-      ellipse(data.x,data.y,10,10);
-  });
-}
-
-function draw() { 
-    //nothing
-}
-function mouseDragged()
-{  fill(0);
-   noStroke();
-   ellipse(mouseX,mouseY,10,10); 
-   sendmouse(mouseX,mouseY,name);
-}
-function sendmouse(xpos,ypos,nm)
-{  var data ={
-      x : xpos,
-      y : ypos,
-      name : nm
-    }; 
-    console.log("Sending "+data.x+" "+data.y+" "+data.name);
-   socket.emit('mouse',data);
-}
-
  $(".room-title").text(room);
  // fires when client successfully conencts to the server
  socket.on("connect", function() {
@@ -250,6 +220,4 @@ function sendmouse(xpos,ypos,nm)
 
    // At last, if the user has denied notifications, and you
    // want to be respectful there is no need to bother them any more.
- } 
-
- 
+ }
