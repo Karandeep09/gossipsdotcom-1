@@ -34,7 +34,7 @@ function sendCurrentUsers(socket) { // loading current users
  
 
   socket.emit("message", {
-    name: "System",
+    name: "Natasha",
     text: "Current Users : " + users.join(', '),
     timestamp: moment().valueOf()
   });
@@ -53,7 +53,7 @@ io.on("connection", function(socket) {
       socket.leave(userdata.room); 
       socket.broadcast.to(userdata.room).emit("message", {
         text: userdata.name + " has left",
-        name: "System",
+        name: "Natasha",
         timestamp: moment().valueOf()
       });
 
@@ -69,7 +69,7 @@ io.on("connection", function(socket) {
     socket.join(req.room);
     //broadcast new user joined room
     socket.broadcast.to(req.room).emit("message", {
-      name: "System",
+      name: "Natasha",
       text: req.name + ' has joined',
       timestamp: moment().valueOf()
     });
