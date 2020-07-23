@@ -5,12 +5,12 @@ var http = require("http").Server(app);
 
 
 var moment = require("moment");
-var music = {'tabla' : 'tabla.mp3',
-             'flute' :'https://fsa.zobj.net/download/bsbkyc23fQx26Sfp6RPCeQUhZezFvYmoOApa6kCX_1O3EJXREMYo2uEKB7SoR828ptgClHCM6nCrs4ybyMKsPkPEDqBrEPz7sJ6LgXAyYR06Tqa_9ZQqdyPrsSVs/?a=web&c=72&f=flute_classic.mp3&special=1595502341-M7eGxez3w3sVLv1uCIFXY7Tk4CmW7x8aZiUqJ2h7z7w%3D',
-             'piano' : 'https://fsa.zobj.net/download/bFiYKEtCtgGCe_v3UDKlDbPajfkS9xKVwAk2c--BtRZ5lFMhqt8WsrOwxsupU9vhdRz7hOenEyp5pFvqOPeHiBKyDKtEZ5cs-dG_rvKrn640jZqHmUAtOkdl4ims/?a=web&c=72&f=piano.mp3&special=1595502690-VN%2FuQQZ8X8gGmu5roFbPGE2H7GooBrt5eWOFeeq2xPc%3D',          
-             'guitar' : 'https://fsa.zobj.net/download/b7b0Utabo40-NklnniTt2SlrNUTtuawgKBka5IBCG-oJTxveCREZSNWLfFMWwaDhslI2XApbvDSRbx28v2QP7koJpkcUOf_MUthYupAZtwDB2d9JNDe806wGRuu0/?a=web&c=72&f=guitar.mp3&special=1595502992-f5vOT1LfgQb%2BHXn5O7jYzmGgdcBG0cy0K530sPtImSM%3D',
-             'dhol' : 'https://fsa.zobj.net/download/btL--45VINmF68lh3PonmdXmERLXi7ENUYomQxKjDTvS35xFanBOf0jB-zfGI7LvdRub80TmalvuARnmWc5kfI_yjlSO3hjfDZuMt_925Z6WBa8jYEtXjkZ-nuQ8/?a=web&c=72&f=dhol.mp3&special=1595503224-CwCMBvyX0G0ZpYBAvvSaCh7H%2F0sWJvl8VJbbXPO9cEk%3D',
-             'sitar' : 'https://fsa.zobj.net/download/bo37A-8yOvmt8jKvVJGUqlUj22J_Pzo5Zz1VXxft8C48bhmRF7XUjvWHndDnOuelPInGyx3hX-Lid8UOyKF1BD97R-Hhe13ozWL6Pb9K0q-sXKOz0TUCAEnQ-0Nk/?a=web&c=72&f=sitar.mp3&special=1595503284-KFy1hQ8CQCsD4HVBqCln%2FmQvY%2Ftu8kRuh1xqbVd4m1E%3D'
+var music = {'tabla' : 'sound/tabla.mp3',
+             'flute' : 'sound/flute_classic.mp3',
+             'piano' : 'sound/piano.mp3',          
+             'guitar' : 'sound/guitar.mp3',
+             'dhol' : 'sound/dhol.mp3',
+             'sitar' : 'sound/sitar.mp3'
             };
 //
 //console.log(music);
