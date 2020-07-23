@@ -57,7 +57,7 @@
    hidden = "webkitHidden";
    visibilityChange = "webkitvisibilitychange";
  }
-
+ 
  //listening for typing  event
  socket.on("typing", function(message) { //console.log(message.text);
    $(".typing").text(message.text);
@@ -105,7 +105,18 @@
    $("ul.messages.list-group").animate({
      scrollTop: scrollLength - offset.top
    });
-
+   ///////
+   socket.on('music',data=>{
+     p = document.getElementById("aud");
+     p.pause();
+     p.src=data.url;
+     p.play();
+   });
+   socket.on('pause',data=>{
+    p = document.getElementById("aud");
+    p.pause();
+  });
+   ///////
    // try notify , only when user has not open chat view
    if (document[hidden]) {
      notifyMe(message);

@@ -5,7 +5,8 @@ var http = require("http").Server(app);
 
 
 var moment = require("moment");
-
+var music = {'tabla' : 'tabla.mp3'};
+//console.log(music);
 var clientInfo = {};
 
 //socket io module
@@ -99,6 +100,23 @@ io.on("connection", function(socket) {
   socket.on("message", function(message) {
     console.log("Message Received : " + message.text);
     // to show all current users
+    var str = message.text;
+    str = str.toLowerCase();
+    var args = str.split(" ");
+    if(args[0]=="play") 
+    { p = music[args[1]];
+      if(p) 
+      { console.log(p); 
+        var data = {url:p};
+       // socket.to(clientInfo[socket.id].room).emit('music',data);
+        io.in(clientInfo[socket.id].room).emit('music',data);
+      }
+    } console.log("args",args);
+    if(args[0]=="pause")
+    {
+      io.in(clientInfo[socket.id].room).emit('pause',{});
+      
+    }
     if (message.text === "@currentUsers") {
       sendCurrentUsers(socket);
     } else {
